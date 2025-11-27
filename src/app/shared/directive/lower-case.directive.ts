@@ -14,6 +14,6 @@ export class LowerCaseDirective implements OnInit {
   onLowerCase() {
     let val = this._render.selectRootElement(this._eleRef.nativeElement).value
     this._render.selectRootElement(this._eleRef.nativeElement).value = val.toLowerCase()
-
   }
+  
 }

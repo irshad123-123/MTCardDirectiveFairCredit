@@ -16,6 +16,7 @@ import { HighlightDirective } from './shared/directive/highlight.directive';
 import { Highlight1Directive } from './shared/directive/highlight1.directive';
 import { UpperCaseDirective } from './shared/directive/upper-case.directive';
 import { LowerCaseDirective } from './shared/directive/lower-case.directive';
+import { CreditCardDirective } from './shared/directive/credit-card.directive';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { LowerCaseDirective } from './shared/directive/lower-case.directive';
     HighlightDirective,
     Highlight1Directive,
     UpperCaseDirective,
-    LowerCaseDirective
+    LowerCaseDirective,
+    CreditCardDirective
   ],
   imports: [
     BrowserModule,
