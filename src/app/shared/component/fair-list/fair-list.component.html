@@ -1,0 +1,11 @@
+<div
+(click) = 'onChangeFair(fair)'
+class="card mb-3" *ngFor = 'let fair of fairArr'>
+    <div class="card-body rounded">
+        <strong>{{fair.fairName}}</strong>
+        <div class="rounded dateInfo">
+            <p class="m-0">Event Type : {{fair.type}}</p>
+            <p class="m-0">Date : {{(fair.startDate)*1000 | date}}</p>
+        </div>
+    </div>
+</div>

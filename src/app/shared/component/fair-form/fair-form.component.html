@@ -1,0 +1,10 @@
+<div class="fair">
+    <figure class="content">
+        <img [src]='fairArr.bannerUrl'>
+        <figcaption>
+            <p class="m-0">Event Type : {{fairArr.type}}</p>
+            <p class="m-0">Date : {{(fairArr.startDate)*1000 | date}}</p>
+        </figcaption>
+    </figure>
+    <p [innerHTML] = 'fairArr.candidateDescription'></p>
+</div>

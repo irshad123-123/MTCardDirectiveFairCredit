@@ -1,0 +1,14 @@
+<h2 class="rounded">Fairs</h2>
+<div class="row">
+    <div class="col-md-4">
+        <app-fair-list
+        (onChange) = 'onChangeFair($event)'
+        [fairArr] = 'fairArr'
+        ></app-fair-list>
+    </div>
+    <div class="col-md-8">
+        <app-fair-form
+        [fairArr] = 'firstData'
+        ></app-fair-form>
+    </div>
+</div>

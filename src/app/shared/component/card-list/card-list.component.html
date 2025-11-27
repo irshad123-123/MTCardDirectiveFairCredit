@@ -1,0 +1,22 @@
+<div class="card h-100">
+    <div class="card-header d-flex justify-content-between">
+        <strong>{{card.pName}}</strong>
+        <P
+        [ngClass] ="{
+            'text-danger' : card.pCatlog === 'Electronic',
+            'text-success' : card.pCatlog === 'Product'
+        }"
+        >{{card.pCatlog}}</P>
+    </div>
+    <div class="card-body">
+        <p>{{card.pDistription}}</p>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button
+        (click) = 'onEdit(card)'
+        class="btn btn-primary">Edit</button>
+        <button
+        (click) = 'onRemove(card.pId)'
+        class="btn btn-danger">Remove</button>
+    </div>
+</div>

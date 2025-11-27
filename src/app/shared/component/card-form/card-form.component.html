@@ -1,0 +1,37 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <form #cardForm='ngForm' (ngSubmit) = 'onAddCard()'>
+            <div class="form-group">
+                <label for="pName">Product Name</label>
+                <input
+                ngModel
+                required
+                name="pName"
+                class="form-control" id="pName">
+            </div>
+            <div class="form-group">
+                <label for="pDistription">Product Distription</label>
+                <textarea
+                ngModel
+                required
+                name="pDistription"
+                class="form-control" id="pDistription"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="pCatlog">Product Categery</label>
+                <select
+                ngModel
+                required
+                name="pCatlog"
+                class="form-control" id="pCatlog">
+                    <option value="Electronic">Electronic</option>
+                    <option value="Product">Product</option>
+                </select>
+            </div>
+            <button [disabled] = 'cardForm.invalid' *ngIf = '!isEditMode' class="btn btn-primary btn-block">Add Card</button>
+            <button 
+            (click) = 'onUpdateCard()'
+            *ngIf = 'isEditMode' class="btn btn-primary btn-block">Update Card</button>
+        </form>
+    </div>
+</div>
